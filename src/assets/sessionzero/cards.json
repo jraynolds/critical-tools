@@ -1,0 +1,308 @@
+[
+	{
+		"title": "Game Meta",
+		"color": "hsl(240, 100%, 80%, .3)",
+		"cardColor": "hsl(240, 100%, 50%, .9)",
+		"cards": [
+			{
+				"title": "Fatality",
+				"subtitle": "How deadly should the game be?",
+				"icons": [
+					"mdi-peace",
+					"mdi-skull-outline"
+				],
+				"colors": [
+					"hsl(120, 0%, 30%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"No PC death, under any circumstances.",
+					"Death only if we really, really mess up.",
+					"Death's alright, so long as it doesn't happen often.",
+					"Dangerous battles should offer the possibility of death.",
+					"Bring it on! Life should be brutish, nasty and short."
+				]
+			},
+			{
+				"title": "Downtime and Relaxation",
+				"subtitle": "How fast-paced is the game? How much opportunity to chill?",
+				"icons": [
+					"mdi-chat-sleep",
+					"mdi-run-fast"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"There's a quest, but the players can pursue it when they want. They've got time.",
+					"There'll be plenty of opportunities to relax, but the campaign is always waiting.",
+					"It'll be a mix: downtime in between the important bits.",
+					"You may get a moment to rest now and then, but don't count on it. Time is short.",
+					"Time for relaxation? With the end of the world breathing down your neck?"
+				]
+			},
+			{
+				"title": "Rule Balance",
+				"subtitle": "Who decides what the rules are? What happens when there's a conflict?",
+				"icons": [
+					"mdi-book-open-page-variant-outline",
+					"mdi-account-voice"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"The books decide what flies, and when. If someone--even the DM--is misinterpreting, they should be corrected.",
+					"The books and errata are king, but superceded by special occasion.",
+					"The written rules are the backbone, but what the DM decides goes, goes.",
+					"The rules are more creation by the DM than able to be referenced.",
+					"This game runs by the DM's say. If they say you get two death saves, you get two."
+				]
+			},
+			{
+				"title": "Homebrewing Player Characters",
+				"subtitle": "If the players want to play something special, can they? How unique?",
+				"icons": [
+					"mdi-cancel",
+					"mdi-check"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"No. The players have to choose from the strictly written material.",
+					"There might be wiggle room once in a while for something unique, but the majority content should be official.",
+					"Players can expect to be able to alter some parts of their characters for flavor, but little else.",
+					"There's a lot the players can alter about their characters, so long as it's with the DM's permission.",
+					"Pretty much anything goes! Let your characters reflect your fancy."
+				]
+			},
+			{
+				"title": "Visual vs. Imagination",
+				"subtitle": "How is the game going to be visualized? Miniatures (or if long-distance, avatars)? Less?",
+				"icons": [
+					"mdi-thought-bubble",
+					"mdi-eye"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Purely theater of the mind. Strap in for a riveting tale, and close your eyes.",
+					"A couple of visual references here and there, but the game will mostly take place in the mind.",
+					"There'll be visual material, but not for everything. A miniature for each character, or an avatar.",
+					"Expect a great deal of visual reference anytime it's called for: miniatures, avatars, landscapes.",
+					"The whole world will be visualized. An ocean of detail, painstakingly crafted."
+				]
+			},
+			{
+				"title": "Person-to-Person",
+				"subtitle": "Are you going to be sitting at a table, or on camera? Voices? Or will you be merely names on a board?",
+				"icons": [
+					"mdi-pen",
+					"mdi-account-voice"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Just names, just text. If there's a tabletop, it's virtual and screen-name anonymous.",
+					"Names and a bit now and then of voice, but it won't be necessary to speak up.",
+					"Voice at least will be required.",
+					"We'll be on voice, and we'll be visible at least some of the time. Make sure you have a webcam.",
+					"Constant voice and video. Or, as some people call it, 'meeting in person.'"
+				]
+			},
+			{
+				"title": "Seriousness at the Table",
+				"subtitle": "What level of seriousness and focus is needed at the table? Can the players crack a few jokes?",
+				"icons": [
+					"mdi-emoticon-neutral",
+					"mdi-emoticon-lol"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Keep it serious. Once we're sitting down at the table, the game should be all we talk about.",
+					"We can joke about or laugh at events in game, but it shouldn't overtake the session.",
+					"Some derailing is fine, but we'll get back on track before long.",
+					"It's a game: it's called that for a reason. Have fun, just remember the game's going on.",
+					"Laugh! Play! Enjoy! We're here to hang out, have a good time, and make friends."
+				]
+			}
+		]
+	},
+	{
+		"title": "Expectations for Players",
+		"color": "hsl(320, 100%, 80%, .3)",
+		"cardColor": "hsl(0, 100%, 50%, .9)",
+		"cards": [
+			{
+				"title": "Player Responsibility",
+				"subtitle": "How much work are the players expected to do? In session? Out?",
+				"icons": [
+					"mdi-chat-sleep",
+					"mdi-pen"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"The players can sit back and enjoy the session. If names or notes have to be remembered, the DM will handle it.",
+					"Now and then the players might have to remember someone or something important.",
+					"The players will be expected to remember appropriate people and details.",
+					"This game requires the players to put in a decent amount of effort in-game--and out of game, too.",
+					"Players should expect to have do do work on their own, outside of each session to help prepare and be ready for the game."
+				]
+			},
+			{
+				"title": "Player-led Narration",
+				"subtitle": "How much are the players going to be writing the story?",
+				"icons": [
+					"mdi-voice-off",
+					"mdi-account-voice"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Not at all. The DM has a story in mind, and the players are here to experience it.",
+					"Some, now and then: players can guide the story in moments of daring-do.",
+					"A decent amount. Players can provide some story direction, and the DM will pick and choose.",
+					"A lot! The DM has a campaign, but the players' interests will shape what aspects are focused on.",
+					"The players are there to guide the story: the DM is there to follow up on it."
+				]
+			},
+			{
+				"title": "Player Secrets",
+				"subtitle": "Can players keep secrets from one another? Is there meta-knowledge?",
+				"icons": [
+					"mdi-message",
+					"mdi-thought-bubble"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Players should speak openly: everyone's mature enough to tell meta from in-character knowledge.",
+					"There might be small items players keep from another, but nothing major.",
+					"Now and then the players might keep facts or items from others, until their moment to be revealed.",
+					"There'll be plenty of intrigue among the party: secrets abound.",
+					"It's reasonable to assume at any moment, in every session, secrets are being kept."
+				]
+			}
+		]
+	},
+	{
+		"title": "Story Content",
+		"color": "hsl(120, 100%, 80%, .3)",
+		"cardColor": "hsl(120, 100%, 30%, .9)",
+		"cards": [
+			{
+				"title": "Fatality",
+				"subtitle": "How deadly should the game be?",
+				"icons": [
+					"mdi-peace",
+					"mdi-skull-outline"
+				],
+				"colors": [
+					"hsl(120, 0%, 30%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"No PC death, under any circumstances.",
+					"Death only if we really, really mess up.",
+					"Death's alright, so long as it doesn't happen often.",
+					"Dangerous battles should offer the possibility of death.",
+					"Bring it on! Life should be brutish, nasty and short."
+				]
+			},
+			{
+				"title": "Narrative vs. Combat",
+				"subtitle": "What balance should the game find?",
+				"icons": [
+					"mdi-book-open-page-variant-outline",
+					"mdi-sword"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Fights only to advance the story, and rarely at that.",
+					"Combat is alright, but I'm really here for the story.",
+					"An even mix of both is good.",
+					"Story is fine, but the bulk of our time should be round by round!",
+					"Story is what happens during Long Rests between each fight."
+				]
+			},
+			{
+				"title": "Mature Content",
+				"subtitle": "How complicated--or uncomfortable--should the game tone go?",
+				"icons": [
+					"mdi-comment-off",
+					"mdi-comment-alert"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"The tone will be clean, smooth and sanitized. Anything too dark will be avoided.",
+					"If the story dips into something difficult, it'll be treated maturely, and briefly.",
+					"Now and then the story may touch on complex or difficult topics, but they'll have their place.",
+					"Difficult topics can't be completely avoided, not without harming the story, but they won't be all there is.",
+					"The world is gritty and dark: the story will reflect that."
+				],
+				"toggles": [
+					{
+						"title": "Gore",
+						"icon": "mdi-water-alert",
+						"clicked": true
+					},
+					{
+						"title": "Discrimination",
+						"icon": "mdi-chat-alert",
+						"clicked": true
+					},
+					{
+						"title": "Sex content",
+						"icon": "mdi-human-male-female",
+						"clicked": true
+					}
+				],
+				"onColor": "white",
+				"offColor": "hsl(0, 40%, 40%, .7)"
+			},
+			{
+				"title": "Diplomatic Depth",
+				"subtitle": "What level of complexity will the interpersonal, diplomatic or political facets of the game hold?",
+				"icons": [
+					"mdi-account-question",
+					"mdi-pen"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Nothing's too complicated. The diplomatic landscape is simple.",
+					"Some NPCs may have complicated relationships or motivations.",
+					"Some diplomatic areas or aspects of the game may involve moderate complexity.",
+					"The players will have to contend with a difficult poticial landscape.",
+					"This game is one with tremendous diplomatic depth. The players must be ready to contend with it."
+				]
+			}
+		]
+	}
+]
