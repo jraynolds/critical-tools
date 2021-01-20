@@ -11,7 +11,7 @@
 				v-for="card in cards" 
 				:key="card.title"
 			>
-				<v-card style="min-height: 470px;" class="d-flex flex-column align-center" :to="card.to">
+				<v-card style="min-height: 600px;" class="d-flex flex-column align-center" :to="card.to">
 					<v-card-title class="">{{ card.title }}</v-card-title>
 					<v-spacer />
 					<v-col class="pa-0 d-flex justify-center align-center">
