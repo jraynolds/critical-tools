@@ -6,16 +6,27 @@
       dark
 			clipped-left
     >
-		
-			<v-spacer />
+			<v-col cols="4">
+			</v-col>
 
-			<v-btn x-large text>
-				D20
-				<v-icon x-large>mdi-dice-d20</v-icon>
-				Tools
-			</v-btn>
+			<v-col cols="4" class="text-center">
+				<v-btn x-large text to="/">
+					Critical
+					<v-icon x-large>mdi-dice-d20</v-icon>
+					Tools
+				</v-btn>
+			</v-col>
 
-			<v-spacer />
+			<v-col cols="4" class="text-right">
+				<v-btn
+					href="https://twitter.com/jasper_raynolds"
+					target="_blank"
+					icon
+					title="Creator's twitter"
+				>
+					<v-icon>mdi-twitter</v-icon>
+				</v-btn>
+			</v-col>
 
     </v-app-bar>
 

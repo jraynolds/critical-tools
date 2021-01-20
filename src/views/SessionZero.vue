@@ -24,7 +24,7 @@
 								:card="card"
 								class="mb-2"
 								:changedColor="category.cardColor"
-								@changed="changeUrl()"
+								@changed="changeUrl(); hasChanged = true"
 							/>
 						</v-col>
 					</v-card>
@@ -45,7 +45,8 @@ export default {
   },
   data: () => ({
 		categories: categories,
-		responses: null
+		responses: null,
+		hasChanged: false
 	}),
 	computed: {
 		// url() {
@@ -65,9 +66,7 @@ export default {
 	methods: {
 		changeUrl() {
 			let url = "/session-zero/" + this.getUrl();
-			console.log(url);
-			console.log(this.$route.path);
-			if (url != this.$route.path) this.$router.push(url);
+			if (url != this.$route.path) this.$router.replace(url);
 		},
 		getUrl() {
 			let url = "";
@@ -84,9 +83,6 @@ export default {
 		}
 	},
 	beforeMount() {
-		console.log(this.$route);
-		console.log(this.$route.params);
-		console.log(this.$route.params.selections);
 		let selections = "";
 		if (this.$route.params.selections) selections = this.$route.params.selections;
 
@@ -107,6 +103,19 @@ export default {
 					}
 					toggle.clicked = clicked;
 				}
+			}
+		}
+	},
+	beforeRouteLeave(to, from, next) {
+		if (!this.hasChanged) next();
+		else {
+			const answer = window.confirm(
+				'Are you sure you want to leave? Cancel and copy the URL to keep your changes!'
+			)
+			if (answer) {
+				next()
+			} else {
+				next(false)
 			}
 		}
 	}

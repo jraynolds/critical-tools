@@ -24,25 +24,6 @@
 				]
 			},
 			{
-				"title": "Downtime and Relaxation",
-				"subtitle": "How fast-paced is the game? How much opportunity to chill?",
-				"icons": [
-					"mdi-chat-sleep",
-					"mdi-run-fast"
-				],
-				"colors": [
-					"hsl(240, 0%, 50%)",
-					"hsl(0, 0%, 50%)"
-				],
-				"descriptions": [
-					"There's a quest, but the players can pursue it when they want. They've got time.",
-					"There'll be plenty of opportunities to relax, but the campaign is always waiting.",
-					"It'll be a mix: downtime in between the important bits.",
-					"You may get a moment to rest now and then, but don't count on it. Time is short.",
-					"Time for relaxation? With the end of the world breathing down your neck?"
-				]
-			},
-			{
 				"title": "Rule Balance",
 				"subtitle": "Who decides what the rules are? What happens when there's a conflict?",
 				"icons": [
@@ -117,30 +98,11 @@
 					"We'll be on voice, and we'll be visible at least some of the time. Make sure you have a webcam.",
 					"Constant voice and video. Or, as some people call it, 'meeting in person.'"
 				]
-			},
-			{
-				"title": "Seriousness at the Table",
-				"subtitle": "What level of seriousness and focus is needed at the table? Can the players crack a few jokes?",
-				"icons": [
-					"mdi-emoticon-neutral",
-					"mdi-emoticon-lol"
-				],
-				"colors": [
-					"hsl(240, 0%, 50%)",
-					"hsl(0, 0%, 50%)"
-				],
-				"descriptions": [
-					"Keep it serious. Once we're sitting down at the table, the game should be all we talk about.",
-					"We can joke about or laugh at events in game, but it shouldn't overtake the session.",
-					"Some derailing is fine, but we'll get back on track before long.",
-					"It's a game: it's called that for a reason. Have fun, just remember the game's going on.",
-					"Laugh! Play! Enjoy! We're here to hang out, have a good time, and make friends."
-				]
 			}
 		]
 	},
 	{
-		"title": "Expectations for Players",
+		"title": "Player Expectations",
 		"color": "hsl(320, 100%, 80%, .3)",
 		"cardColor": "hsl(0, 100%, 50%, .9)",
 		"cards": [
@@ -183,7 +145,7 @@
 				]
 			},
 			{
-				"title": "Player Secrets",
+				"title": "Secrets",
 				"subtitle": "Can players keep secrets from one another? Is there meta-knowledge?",
 				"icons": [
 					"mdi-message",
@@ -199,6 +161,44 @@
 					"Now and then the players might keep facts or items from others, until their moment to be revealed.",
 					"There'll be plenty of intrigue among the party: secrets abound.",
 					"It's reasonable to assume at any moment, in every session, secrets are being kept."
+				]
+			},
+			{
+				"title": "Consequences",
+				"subtitle": "Are there harsh consequences for mistakes or misplays? Does the DM 'play nice?'",
+				"icons": [
+					"mdi-skull-crossbones",
+					"mdi-handshake"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Players should think their actions through: the wrong choice is invariably fatal.",
+					"A player who makes a dumb decision should expect trouble, but it won't be the end of them.",
+					"Bad choices are bound to happen--and the DM may step in now and then to offer advice.",
+					"The DM is there to offer reasonable advice: after all, your characters would know a thing or two.",
+					"We're here to have fun, not slap each other on the wrist. The DM knows you'd make a smart choice."
+				]
+			},
+			{
+				"title": "Seriousness at the Table",
+				"subtitle": "What level of seriousness and focus is needed at the table? Can the players crack a few jokes?",
+				"icons": [
+					"mdi-emoticon-neutral",
+					"mdi-emoticon-lol"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Keep it serious. Once we're sitting down at the table, the game should be all we talk about.",
+					"We can joke about or laugh at events in game, but it shouldn't overtake the session.",
+					"Some derailing is fine, but we'll get back on track before long.",
+					"It's a game: it's called that for a reason. Have fun, just remember the game's going on.",
+					"Laugh! Play! Enjoy! We're here to hang out, have a good time, and make friends."
 				]
 			}
 		]
@@ -244,6 +244,25 @@
 					"An even mix of both is good.",
 					"Story is fine, but the bulk of our time should be round by round!",
 					"Story is what happens during Long Rests between each fight."
+				]
+			},
+			{
+				"title": "Downtime and Relaxation",
+				"subtitle": "How fast-paced is the game? How much opportunity to chill?",
+				"icons": [
+					"mdi-chat-sleep",
+					"mdi-run-fast"
+				],
+				"colors": [
+					"hsl(240, 0%, 50%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"There's a quest, but the players can pursue it when they want. They've got time.",
+					"There'll be plenty of opportunities to relax, but the campaign is always waiting.",
+					"It'll be a mix: downtime in between the important bits.",
+					"You may get a moment to rest now and then, but don't count on it. Time is short.",
+					"Time for relaxation? With the end of the world breathing down your neck?"
 				]
 			},
 			{
