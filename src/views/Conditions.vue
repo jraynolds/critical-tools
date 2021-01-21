@@ -168,18 +168,6 @@
 				</v-card>
 			</v-col>
 		</v-row>
-
-		<v-spacer />
-		<v-row class="text-center justify-center mb-n4">
-			<v-card-subtitle>
-				This utility created by Jasper Raynolds. All information is from the SRD.
-			</v-card-subtitle>
-		</v-row>
-		<v-row class="text-center justify-center mt-n6">
-			<v-card-subtitle>
-				If you have questions, comments or recommendations, you can tweet me at <a href="https://twitter.com/jasper_raynolds">@jasper_raynolds</a>.
-			</v-card-subtitle>
-		</v-row>
 	</v-container>
 </template>
 

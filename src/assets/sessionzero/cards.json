@@ -36,7 +36,7 @@
 				],
 				"descriptions": [
 					"The books decide what flies, and when. If someone--even the DM--is misinterpreting, they should be corrected.",
-					"The books and errata are king, but superceded by special occasion.",
+					"The books and errata are king, but superseded by special occasion.",
 					"The written rules are the backbone, but what the DM decides goes, goes.",
 					"The rules are more creation by the DM than able to be referenced.",
 					"This game runs by the DM's say. If they say you get two death saves, you get two."
@@ -208,25 +208,6 @@
 		"color": "hsl(120, 100%, 80%, .3)",
 		"cardColor": "hsl(120, 100%, 30%, .9)",
 		"cards": [
-			{
-				"title": "Fatality",
-				"subtitle": "How deadly should the game be?",
-				"icons": [
-					"mdi-peace",
-					"mdi-skull-outline"
-				],
-				"colors": [
-					"hsl(120, 0%, 30%)",
-					"hsl(0, 0%, 50%)"
-				],
-				"descriptions": [
-					"No PC death, under any circumstances.",
-					"Death only if we really, really mess up.",
-					"Death's alright, so long as it doesn't happen often.",
-					"Dangerous battles should offer the possibility of death.",
-					"Bring it on! Life should be brutish, nasty and short."
-				]
-			},
 			{
 				"title": "Narrative vs. Combat",
 				"subtitle": "What balance should the game find?",

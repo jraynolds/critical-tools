@@ -73,8 +73,7 @@
 				"movement": false, 
 				"reaction": false, 
 				"strSave": "fail", 
-				"dexSave": "fail",
-				"resistances": ["all"]
+				"dexSave": "fail"
 			} ,
 			"descriptions": [
 				"You can't speak.",
@@ -86,7 +85,7 @@
 			"icon": "snake", 
 			"selected": false, 
 			"effects": { 
-				"action": false, 
+				"action": false,
 				"bonusAction": false,
 				"movement": false, 
 				"reaction": false,
