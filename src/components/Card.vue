@@ -1,12 +1,31 @@
 <template>
-	<v-card min-height="290" class="d-flex flex-column justify-space-between">
-		<v-card-title class="pb-0">{{ card.title }}</v-card-title>
-		<v-row class="ma-0 d-flex flex-column">
-			<v-col class="px-0">
-				<v-card-subtitle class="pt-0">{{ card.subtitle }}</v-card-subtitle>
-			</v-col>
-			<v-col class="mb-0 pb-0 d-flex align-start" :class="[card.dragIcons ? 'pt-6' : '']">
+	<v-card 
+		:min-height="compact ? 0 : 290" 
+		class="d-flex flex-column justify-space-between"
+		:style="cardOpacity"
+	>
+		<v-row class="ma-0 pa-0">
+			<v-card-title class="pb-0" :class="slider ? '' : 'mb-4'">
+				{{ card.title }}
+			</v-card-title>
+			<v-spacer />
+			<v-checkbox v-if="checkbox" v-model="selected" class="mr-2" />
+		</v-row>
+		<v-row class="px-0 ma-0 mb-4" v-if="card.subtitle">
+			<v-card-subtitle 
+				class="pt-0" 
+				:class="compact ? 'pb-0' : ''"
+			>
+				{{ card.subtitle }}
+			</v-card-subtitle>
+		</v-row>
+		<v-row class="ma-0 d-flex flex-column" v-if="slider">
+			<v-col 
+				class="mb-0 pb-0 d-flex align-start" 
+				:class="[card.dragIcons ? 'pt-6' : '', compact ? 'pt-0' : '']"
+			>
 				<v-slider
+					v-if="slider"
 					:thumb-size="34"
 					:thumb-label="card.dragIcons ? 'always' : false"
 					:min="0"
@@ -40,13 +59,13 @@
 					</template> -->
 				</v-slider>
 			</v-col>
-			<v-col>
+			<v-col :class="compact ? 'pt-0' : ''" v-if="slider">
 				<v-card-text 
-					class="pt-0 px-0 text-center" 
-					v-if="card.descriptions" 
+					class="pt-0 px-0 text-center"
+					:class="compact ? 'pb-0 mt-n4' : ''"
 					style="font-style: italic;"
 				>
-					{{ card.descriptions[value] }}
+					{{ descriptions[value] }}
 				</v-card-text>
 			</v-col>
 			<v-row v-if="card.toggles" class="ma-0">
@@ -72,13 +91,32 @@
 export default {
 	props: [ 
 		"card",
-		"changedColor"
+		"changedColor",
+		"compact",
+		"checkbox",
+		"slider"
 	],
 	data: () => ({
 		value: 2,
-		changed: false
+		changed: false,
+		selected: false,
+		defaultDescriptions: [
+			"I wanted a lot less.",
+			"I wanted a little less.",
+			"It was just the right amount.",
+			"I wanted a little more.",
+			"I wanted way more!"
+		]
 	}),
 	computed: {
+		cardOpacity() {
+			if (this.checkbox && !this.selected) return { opacity: "50%" };
+			return {};
+		},
+		descriptions() {
+			if (this.card.descriptions) return this.card.descriptions;
+			return this.defaultDescriptions;
+		},
 		max() {
 			if ("max" in this.card) return this.card.max;
 			return 4;
@@ -146,10 +184,15 @@ export default {
 		value(v) {
 			this.changed = true;
 			this.card.value = v;
+		},
+		selected(v) {
+			this.changed = true;
+			this.card.selected = v;
 		}
 	},
 	beforeMount() {
 		this.value = this.card.value;
+		this.selected = this.card.selected;
 	}
 }
 </script>

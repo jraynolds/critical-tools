@@ -3,6 +3,7 @@
 		expand-on-hover
 		clipped
 		app
+		permanent
 	>
 		<v-list class="pb-2 mb-n4 pt-6" nav>
 			
@@ -40,7 +41,12 @@ export default {
 				title: "Conditions",
 				icon: "mdi-emoticon-sick",
 				to: "/conditions/"
-			}
+			},
+			// {
+			// 	title: "Post-Session Poll",
+			// 	icon: "mdi-poll-box",
+			// 	to: "/post-session/"
+			// }
 		]
 	})
 }

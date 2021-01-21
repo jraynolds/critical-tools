@@ -1,0 +1,155 @@
+[
+	{
+		"title": "Overview",
+		"color": "hsl(240, 100%, 80%, .3)",
+		"cardColor": "hsl(240, 100%, 50%, .9)",
+		"cards": [
+			{
+				"title": "Rating",
+				"subtitle": "How did you like the session?",
+				"icons": [
+					"mdi-thumb-down",
+					"mdi-thumb-up"
+				],
+				"colors": [
+					"hsl(120, 0%, 30%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"Didn't like it.",
+					"Liked it alright, but we've had better sessions.",
+					"It was good! Nothing too bad, nothing too extraordinary.",
+					"It was great! Only a couple issues or things that could have been improved.",
+					"Perfect!! Can't wait for the next one."
+				]
+			},
+			{
+				"title": "Time to shine",
+				"subtitle": "Did you feel like you had enough opportunity to be in the spotlight?",
+				"icons": [
+					"mdi-lightbulb-off",
+					"mdi-lightbulb-on"
+				],
+				"colors": [
+					"hsl(120, 0%, 30%)",
+					"hsl(0, 0%, 50%)"
+				],
+				"descriptions": [
+					"I didn't have any time at all.",
+					"I got a small chance to do my thing, but not enough.",
+					"I had enough time to take center stage.",
+					"I actually got put a little too much on the spot. I'd like to stand out less.",
+					"Way too much focus on me. I needed to be less singled out."
+				]
+			}		
+		]
+	},
+	{
+		"title": "Did you want more...",
+		"color": "hsl(320, 100%, 80%, .3)",
+		"cardColor": "hsl(0, 100%, 50%, .9)",
+		"cards": [
+			{
+				"title": "Combat?",
+				"icons": [
+					"mdi-handshake",
+					"mdi-sword-cross"
+				]
+			},
+			{
+				"title": "Inter-party RP?",
+				"icons": [
+					"mdi-microphone-off",
+					"mdi-account-voice"
+				]
+			},
+			{
+				"title": "RP with NPCs?",
+				"icons": [
+					"mdi-microphone-off",
+					"mdi-account-voice"
+				]
+			},
+			{
+				"title": "Vanity opportunity?",
+				"subtitle": "Outfits, customization, equipment",
+				"icons": [
+					"mdi-eye-off",
+					"mdi-tshirt-crew"
+				]
+			},
+			{
+				"title": "Worldbuilding/Lore?",
+				"icons": [
+					"mdi-book-off",
+					"mdi-book-open-page-variant"
+				]
+			},
+			{
+				"title": "Puzzles?",
+				"icons": [
+					"mdi-puzzle-remove",
+					"mdi-puzzle"
+				]
+			},
+			{
+				"title": "Grittiness?",
+				"icons": [
+					"mdi-baby-carriage",
+					"mdi-skull"
+				]
+			},
+			{
+				"title": "Eroticism?",
+				"icons": [
+					"mdi-heart-remove",
+					"mdi-heart"
+				]
+			},
+			{
+				"title": "Administration?",
+				"subtitle": "Running a community, building something up, resource management",
+				"icons": [
+					"mdi-book-off",
+					"mdi-cash-multiple"
+				]
+			},
+			{
+				"title": "Downtime?",
+				"icons": [
+					"mdi-run",
+					"mdi-bed"
+				]
+			},
+			{
+				"title": "Sidequests?",
+				"icons": [
+					"mdi-road-variant",
+					"mdi-directions-fork"
+				]
+			},
+			{
+				"title": "Moral issues?",
+				"icons": [
+					"mdi-head-check",
+					"mdi-head-question"
+				]
+			},
+			{
+				"title": "PC character growth?",
+				"icons": [
+					"mdi-account-check",
+					"mdi-account-reactivate"
+				]
+			},
+			{
+				"title": "Intrigue",
+				"subtitle": "Political nuance, diplomacy?",
+				"icons": [
+					"mdi-message-bulleted-off",
+					"mdi-message-text-lock"
+				]
+			}
+		]
+	}
+]

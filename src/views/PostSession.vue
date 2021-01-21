@@ -1,7 +1,17 @@
 <template>
-	<v-container>
+	<v-container class="mt-4">
+		<v-row class="d-flex justify-center">
+			<v-card>
+				<v-card-title v-if="isResponse" style="font-style: italic;">
+					You're currently answering a poll request.
+				</v-card-title>
+				<v-card-title v-else style="font-style: italic;">
+					You're currently making a poll.
+				</v-card-title>
+			</v-card>
+		</v-row>
 		<v-row class="ma-0 d-flex justify-center">
-			<v-col xl="10" lg="12" cols="10" >
+			<v-col cols="10">
 				<v-row class="ma-0 justify-center d-flex flex-wrap">
 					<v-col
 						v-for="category in categories"
@@ -23,9 +33,10 @@
 							>
 								<Card
 									:card="card"
-									:slider="true"
+									:compact="true"
 									class="mb-2"
 									:changedColor="category.cardColor"
+									:checkbox="true"
 									@changed="changeUrl(); hasChanged = true"
 								/>
 							</v-col>
@@ -34,55 +45,46 @@
 				</v-row>
 			</v-col>
 		</v-row>
+		<v-row class="d-flex justify-center mb-12">
+			<v-col cols="6">
+				<v-btn 
+					v-if="isResponse"
+					style="width: 100%; height: 50px;" 
+					color="primary" 
+					@click="submit()"
+				>
+					Submit
+				</v-btn>
+				<v-btn 
+					v-else
+					style="width: 100%; height: 50px;" 
+					color="primary" 
+					@click="save()"
+				>
+					Save & Share
+				</v-btn>
+			</v-col>
+		</v-row>
 	</v-container>
 </template>
 
 <script>
 import Card from "@/components/Card.vue"
-import categories from "@/assets/sessionzero/cards.json"
 
 export default {
-  name: 'App',
-  components: {
+	components: {
 		Card
-  },
-  data: () => ({
-		categories: categories,
-		responses: null,
-		hasChanged: false
-	}),
-	computed: {
-		// url() {
-		// 	let url = "";
-		// 	for (let category of this.categories) {
-		// 		for (let card of category.cards) {
-		// 			url += card.value;
-		// 			if ("toggles" in card) for (let toggle of card.toggles) {
-		// 				if (toggle.clicked == false) url += "f";
-		// 				else url += "t";
-		// 			}
-		// 		}
-		// 	}
-		// 	return url;
-		// }
 	},
+	data: () => ({
+		isResponse: false,
+		categories: require("@/assets/postsession/cards.json")
+	}),
 	methods: {
-		changeUrl() {
-			let url = "/session-zero/" + this.getUrl();
-			if (url != this.$route.path) this.$router.replace(url);
+		submit() {
+			// todo
 		},
-		getUrl() {
-			let url = "";
-			for (let category of this.categories) {
-				for (let card of category.cards) {
-					url += card.value;
-					if ("toggles" in card) for (let toggle of card.toggles) {
-						if (toggle.clicked == false) url += "f";
-						else url += "t";
-					}
-				}
-			}
-			return url;
+		save() {
+			// todo
 		}
 	},
 	beforeMount() {
@@ -92,11 +94,13 @@ export default {
 		for (let category of this.categories) {
 			for (let card of category.cards) {
 				let value = 2;
+				let selected = true;
 				if (selections.length && !isNaN(selections.slice(0, 1))) {
 					value = parseInt(selections.slice(0, 1));
 					selections = selections.slice(1);
 				}
 				card.value = value;
+				card.selected = selected;
 				if ("toggles" in card) for (let toggle of card.toggles) {
 					let clicked = false;
 					if (selections.length) {
@@ -109,20 +113,7 @@ export default {
 			}
 		}
 	},
-	beforeRouteLeave(to, from, next) {
-		if (!this.hasChanged) next();
-		else {
-			const answer = window.confirm(
-				'Are you sure you want to leave? Cancel and copy the URL to keep your changes!'
-			)
-			if (answer) {
-				next()
-			} else {
-				next(false)
-			}
-		}
-	}
-};
+}
 </script>
 
 <style>

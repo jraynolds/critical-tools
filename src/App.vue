@@ -32,7 +32,7 @@
 
 		<Sidebar />
 
-    <v-main>
+    <v-main class="ml-n6">
       <router-view />
     </v-main>
   </v-app>

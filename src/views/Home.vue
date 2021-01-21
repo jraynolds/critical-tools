@@ -1,6 +1,6 @@
 <template>
 	<v-container class="fill-height align-center" style="height: 100%;">
-		<v-row class="fill-height align-center">
+		<v-row class="fill-height d-flex justify-center">
 			<v-col 
 				xl="4"
 				lg="4"

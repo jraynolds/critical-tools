@@ -24,6 +24,11 @@ const routes = [
 		path: '/conditions',
 		name: 'Condition Tracker',
 		component: () => import('../views/Conditions.vue')
+	},
+	{
+		path: '/post-session',
+		name: 'Post-Session Poll',
+		component: () => import('../views/PostSession.vue')
 	}
 ]
 
