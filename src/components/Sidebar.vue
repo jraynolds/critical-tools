@@ -42,6 +42,11 @@ export default {
 				icon: "mdi-emoticon-sick",
 				to: "/conditions/"
 			},
+			{
+				title: "Character Generator",
+				icon: "mdi-cards",
+				to: "/tarot-character/"
+			},
 			// {
 			// 	title: "Post-Session Poll",
 			// 	icon: "mdi-poll-box",

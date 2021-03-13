@@ -1,5 +1,8 @@
 <template>
   <v-app>
+
+		<Sidebar />
+
     <v-app-bar
       app
       color="primary"
@@ -30,9 +33,7 @@
 
     </v-app-bar>
 
-		<Sidebar />
-
-    <v-main class="ml-n6">
+    <v-main>
       <router-view />
     </v-main>
   </v-app>

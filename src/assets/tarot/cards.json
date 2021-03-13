@@ -1,0 +1,496 @@
+{
+	"major": [
+		{
+			"number": 0,
+			"title": "The Fool",
+			"description": "The Eternal Child",
+			"icon": "mdi-emoticon-excited",
+			"examples": []
+		},
+		{
+			"number": 1,
+			"title": "The Magician",
+			"description": "The Alchemist",
+			"icon": "mdi-auto-fix",
+			"examples": []
+		},
+		{
+			"number": 2,
+			"title": "The High Priestess",
+			"description": "The Oracle",
+			"icon": "mdi-snake",
+			"examples": []
+		},
+		{
+			"number": 3,
+			"title": "The Empress",
+			"description": "The Mother",
+			"icon": "mdi-mother-heart",
+			"examples": []
+		},
+		{
+			"number": 4,
+			"title": "The Emperor",
+			"description": "The Father",
+			"icon": "mdi-human-male",
+			"examples": []
+		},
+		{
+			"number": 5,
+			"title": "The Hierophant",
+			"description": "The Teacher",
+			"icon": "mdi-book-cross",
+			"examples": []
+		},
+		{
+			"number": 6,
+			"title": "The Lovers",
+			"description": "The Lover",
+			"icon": "mdi-human-male-female",
+			"examples": []
+		},
+		{
+			"number": 7,
+			"title": "The Chariot",
+			"description": "The Warrior",
+			"icon": "mdi-horse-human",
+			"examples": []
+		},
+		{
+			"number": 8,
+			"title": "Strength",
+			"description": "The Hero",
+			"icon": "mdi-weight-lifter",
+			"examples": []
+		},
+		{
+			"number": 9,
+			"title": "The Hermit",
+			"description": "The Wise Man",
+			"icon": "mdi-school",
+			"examples": []
+		},
+		{
+			"number": 10,
+			"title": "Wheel of Fortune",
+			"description": "The Gambler",
+			"icon": "mdi-ship-wheel",
+			"examples": []
+		},
+		{
+			"number": 11,
+			"title": "Justice",
+			"description": "The Savior",
+			"icon": "mdi-scale-balance",
+			"examples": []
+		},
+		{
+			"number": 12,
+			"title": "The Hanged Man",
+			"description": "The Seeker",
+			"icon": "mdi-lasso",
+			"examples": []
+		},
+		{
+			"number": 13,
+			"title": "Death",
+			"description": "The Rebel",
+			"icon": "mdi-skull",
+			"examples": []
+		},
+		{
+			"number": 14,
+			"title": "Temperance",
+			"description": "The Mediator",
+			"icon": "mdi-yin-yang",
+			"examples": []
+		},
+		{
+			"number": 15,
+			"title": "The Devil",
+			"description": "The Hedonist",
+			"icon": "mdi-emoticon-devil",
+			"examples": []
+		},
+		{
+			"number": 16,
+			"title": "The Tower",
+			"description": "The Destroyer",
+			"icon": "mdi-chess-rook",
+			"examples": []
+		},
+		{
+			"number": 17,
+			"title": "The Star",
+			"description": "The Prophesied Child",
+			"icon": "mdi-star-shooting",
+			"examples": []
+		},
+		{
+			"number": 18,
+			"title": "The Moon",
+			"description": "The Poet",
+			"icon": "mdi-weather-night",
+			"examples": []
+		},
+		{
+			"number": 19,
+			"title": "The Sun",
+			"description": "The Inner Child",
+			"icon": "mdi-white-balance-sunny",
+			"examples": []
+		},
+		{
+			"number": 20,
+			"title": "Judgment",
+			"description": "The Liberator",
+			"icon": "mdi-bugle",
+			"examples": []
+		},
+		{
+			"number": 21,
+			"title": "The World",
+			"description": "The Guide",
+			"icon": "mdi-earth",
+			"examples": []
+		}
+	],
+	"minor": [
+		{
+			"number": 1,
+			"suit": "cups",
+			"description": "discovering a new relationship.",
+			"examples": []
+		},
+		{
+			"number": 2,
+			"suit": "cups",
+			"description": "in a loving partnership.",
+			"examples": []
+		},
+		{
+			"number": 3,
+			"suit": "cups",
+			"description": "in pleasant celebration.",
+			"examples": []
+		},
+		{
+			"number": 4,
+			"suit": "cups",
+			"description": "focusing on bad options.",
+			"examples": []
+		},
+		{
+			"number": 5,
+			"suit": "cups",
+			"description": "stuck in regret.",
+			"examples": []
+		},
+		{
+			"number": 6,
+			"suit": "cups",
+			"description": "nostalgic for better times.",
+			"examples": []
+		},
+		{
+			"number": 7,
+			"suit": "cups",
+			"description": "daydreaming of what could be.",
+			"examples": []
+		},
+		{
+			"number": 8,
+			"suit": "cups",
+			"description": "forsaking the tangible for the pure.",
+			"examples": []
+		},
+		{
+			"number": 9,
+			"suit": "cups",
+			"description": "come to success without expectation.",
+			"examples": []
+		},
+		{
+			"number": 10,
+			"suit": "cups",
+			"description": "truly fulfilled.",
+			"examples": []
+		},
+		{
+			"number": 11,
+			"suit": "cups",
+			"description": "with a child's love.",
+			"examples": []
+		},
+		{
+			"number": 12,
+			"suit": "cups",
+			"description": "with a youth's love.",
+			"examples": []
+		},
+		{
+			"number": 13,
+			"suit": "cups",
+			"description": "with a mother's love.",
+			"examples": []
+		},
+		{
+			"number": 14,
+			"suit": "cups",
+			"description": "with a father's love.",
+			"examples": []
+		},
+		{
+			"number": 1,
+			"suit": "wands",
+			"description": "possessed by creative inspiration.",
+			"examples": []
+		},
+		{
+			"number": 2,
+			"suit": "wands",
+			"description": "roving to buy and sell.",
+			"examples": []
+		},
+		{
+			"number": 3,
+			"suit": "wands",
+			"description": "in the midst of a long journey.",
+			"examples": []
+		},
+		{
+			"number": 4,
+			"suit": "wands",
+			"description": "rejoicing and celebrating.",
+			"examples": []
+		},
+		{
+			"number": 5,
+			"suit": "wands",
+			"description": "in calm conflict with others.",
+			"examples": []
+		},
+		{
+			"number": 6,
+			"suit": "wands",
+			"description": "finding victory.",
+			"examples": []
+		},
+		{
+			"number": 7,
+			"suit": "wands",
+			"description": "facing insurmountable odds.",
+			"examples": []
+		},
+		{
+			"number": 8,
+			"suit": "wands",
+			"description": "making swift decision.",
+			"examples": []
+		},
+		{
+			"number": 9,
+			"suit": "wands",
+			"description": "persevering through hardship.",
+			"examples": []
+		},
+		{
+			"number": 10,
+			"suit": "wands",
+			"description": "taking on too much.",
+			"examples": []
+		},
+		{
+			"number": 11,
+			"suit": "wands",
+			"description": "with a child's emotions.",
+			"examples": []
+		},
+		{
+			"number": 12,
+			"suit": "wands",
+			"description": "with a youth's emotions.",
+			"examples": []
+		},
+		{
+			"number": 13,
+			"suit": "wands",
+			"description": "with a mother's emotions.",
+			"examples": []
+		},
+		{
+			"number": 14,
+			"suit": "wands",
+			"description": "with a father's emotions.",
+			"examples": []
+		},
+		{
+			"number": 1,
+			"suit": "pentacles",
+			"description": "facing a new financial opportunity.",
+			"examples": []
+		},
+		{
+			"number": 2,
+			"suit": "pentacles",
+			"description": "juggling many tasks.",
+			"examples": []
+		},
+		{
+			"number": 3,
+			"suit": "pentacles",
+			"description": "learning.",
+			"examples": []
+		},
+		{
+			"number": 4,
+			"suit": "pentacles",
+			"description": "unwilling to share.",
+			"examples": []
+		},
+		{
+			"number": 5,
+			"suit": "pentacles",
+			"description": "suffering financially.",
+			"examples": []
+		},
+		{
+			"number": 6,
+			"suit": "pentacles",
+			"description": "helping others financially.",
+			"examples": []
+		},
+		{
+			"number": 7,
+			"suit": "pentacles",
+			"description": "making an investment.",
+			"examples": []
+		},
+		{
+			"number": 8,
+			"suit": "pentacles",
+			"description": "in the middle of a difficult project.",
+			"examples": []
+		},
+		{
+			"number": 9,
+			"suit": "pentacles",
+			"description": "enjoying hard work's rewards.",
+			"examples": []
+		},
+		{
+			"number": 10,
+			"suit": "pentacles",
+			"description": "inheriting reward.",
+			"examples": []
+		},
+		{
+			"number": 11,
+			"suit": "pentacles",
+			"description": "with a child's finances.",
+			"examples": []
+		},
+		{
+			"number": 12,
+			"suit": "pentacles",
+			"description": "with a youth's finances.",
+			"examples": []
+		},
+		{
+			"number": 13,
+			"suit": "pentacles",
+			"description": "with a mother's finances.",
+			"examples": []
+		},
+		{
+			"number": 14,
+			"suit": "pentacles",
+			"description": "with a father's finances.",
+			"examples": []
+		},
+		{
+			"number": 1,
+			"suit": "swords",
+			"description": "gaining sudden inspiration.",
+			"examples": []
+		},
+		{
+			"number": 2,
+			"suit": "swords",
+			"description": "unable to choose.",
+			"examples": []
+		},
+		{
+			"number": 3,
+			"suit": "swords",
+			"description": "betrayed.",
+			"examples": []
+		},
+		{
+			"number": 4,
+			"suit": "swords",
+			"description": "pausing in battle.",
+			"examples": []
+		},
+		{
+			"number": 5,
+			"suit": "swords",
+			"description": "finding victory through deceit.",
+			"examples": []
+		},
+		{
+			"number": 6,
+			"suit": "swords",
+			"description": "leaving for calmer waters.",
+			"examples": []
+		},
+		{
+			"number": 7,
+			"suit": "swords",
+			"description": "deeply cunning.",
+			"examples": []
+		},
+		{
+			"number": 8,
+			"suit": "swords",
+			"description": "wrapped up in insecurity.",
+			"examples": []
+		},
+		{
+			"number": 9,
+			"suit": "swords",
+			"description": "making choices driven by anxiety.",
+			"examples": []
+		},
+		{
+			"number": 10,
+			"suit": "swords",
+			"description": "moving past betrayal.",
+			"examples": []
+		},
+		{
+			"number": 11,
+			"suit": "swords",
+			"description": "with a child's wit.",
+			"examples": []
+		},
+		{
+			"number": 12,
+			"suit": "swords",
+			"description": "with a youth's wit.",
+			"examples": []
+		},
+		{
+			"number": 13,
+			"suit": "swords",
+			"description": "with a mother's wit.",
+			"examples": []
+		},
+		{
+			"number": 14,
+			"suit": "swords",
+			"description": "with a father's wit.",
+			"examples": []
+		}
+	]
+}

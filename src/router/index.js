@@ -29,6 +29,11 @@ const routes = [
 		path: '/post-session',
 		name: 'Post-Session Poll',
 		component: () => import('../views/PostSession.vue')
+	},
+	{
+		path: '/tarot-character',
+		name: 'Tarot Character Generator',
+		component: () => import('../views/Tarot.vue')
 	}
 ]
 
