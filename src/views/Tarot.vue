@@ -8,15 +8,24 @@
 
 		<v-col v-if="!mode">
 			<v-row class="text-center">
-				<v-col cols="6" class="d-flex justify-center align-center">
+				<v-col 
+					cols="6" 
+					class="d-flex justify-center align-center flex-column"
+				>
 					<TarotCard 
 						:card="archetype" 
 						arcana="major"
 						cardBack="ARCHETYPE"
 						append="..."
 					/>
+					<v-btn color="secondary" @click="redrawArchetype()">
+						<v-icon>mdi-refresh</v-icon>
+					</v-btn>
 				</v-col>
-				<v-col cols="6">
+				<v-col 
+					cols="6" 
+					class="d-flex justify-center align-center flex-column"
+				>
 					<TarotCard 
 						:card="pattern" 
 						arcana="minor"
@@ -24,6 +33,9 @@
 						prepend="..."
 						append="."
 					/>
+					<v-btn color="secondary" @click="redrawPattern()">
+						<v-icon>mdi-refresh</v-icon>
+					</v-btn>
 				</v-col>
 			</v-row>
 			<v-row class="justify-center" >
@@ -43,7 +55,10 @@
 
 		<v-col v-else>
 			<v-row class="text-center">
-				<v-col cols="4" class="d-flex justify-center align-center">
+				<v-col 
+					cols="4" 
+					class="d-flex justify-center align-center flex-column"
+				>
 					<TarotCard 
 						:card="archetype" 
 						arcana="major"
@@ -51,8 +66,14 @@
 						append="..."
 						:small="true"
 					/>
+					<v-btn color="secondary" @click="redrawArchetype()">
+						<v-icon>mdi-refresh</v-icon>
+					</v-btn>
 				</v-col>
-				<v-col cols="4">
+				<v-col 
+					cols="4" 
+					class="d-flex justify-center align-center flex-column"
+				>
 					<TarotCard 
 						:card="personality" 
 						arcana="all"
@@ -62,8 +83,14 @@
 						:reversible="true"
 						:small="true"
 					/>
+					<v-btn color="secondary" @click="redrawPersonality()">
+						<v-icon>mdi-refresh</v-icon>
+					</v-btn>
 				</v-col>
-				<v-col cols="4">
+				<v-col 
+					cols="4" 
+					class="d-flex justify-center align-center flex-column"
+				>
 					<TarotCard 
 						:card="cycle" 
 						arcana="all"
@@ -72,15 +99,18 @@
 						append="."
 						:small="true"
 					/>
+					<v-btn color="secondary" @click="redrawCycle()">
+						<v-icon>mdi-refresh</v-icon>
+					</v-btn>
 				</v-col>
 			</v-row>
-			<v-row class="justify-center" >
+			<v-row class="justify-center mt-12">
 				<v-col cols="8">
 					<v-btn 
 						color="primary" 
 						large 
 						style="font-size: large; width: 100%;"
-						@click="redraw()"
+						@click="redrawAll()"
 					>
 						<v-icon large left>mdi-refresh</v-icon>
 						Refresh
@@ -115,17 +145,19 @@ export default {
 				Math.floor(Math.random() * this.cards[arcana].length)
 			]
 		},
-		redraw() {
-			this.pattern = this.getRandomCard("minorPersonality");
-
-			this.archetype = this.getRandomCard("majorArchetype");
-
-			this.personality = this.getRandomCard("allPersonality");
-			this.cycle = this.getRandomCard("allCycle");
-		}
+		redrawAll() {
+			this.redrawPattern();
+			this.redrawArchetype();
+			this.redrawPersonality();
+			this.redrawCycle();
+		},
+		redrawPattern() { this.pattern = this.getRandomCard("minorPersonality") },
+		redrawArchetype() { this.archetype = this.getRandomCard("majorArchetype") },
+		redrawPersonality() { this.personality = this.getRandomCard("allPersonality") },
+		redrawCycle() { this.cycle = this.getRandomCard("allCycle") },
 	},
 	beforeMount() {
-		this.redraw();
+		this.redrawAll();
 	}
 }
 </script>

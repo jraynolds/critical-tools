@@ -55,7 +55,7 @@
 							</v-col>
 						</v-row>
 						<v-card dark :style="{backgroundColor: textBackColor}">
-							<v-card-title style="font-style: italic;">
+							<v-card-title style="font-style: italic; word-break: break-word;">
 								{{ title }}
 							</v-card-title>
 							<v-card-text class="ml-3">
