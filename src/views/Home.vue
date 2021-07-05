@@ -62,6 +62,12 @@ export default {
 				description: "Want to create a compelling character on the fly? Draw two Tarot cards to describe their personality, their archetype--and what sort of issues they're dealing with."
 			},
 			{ 
+				title: "Trigger Tracker",
+				img: require("@/assets/UnknownPromo.png"),
+				to: "/trigger-tracker/",
+				description: "Got a lot to pay attention to? Having trouble organizing events in your campaign? Try organizing them in terms of what makes them happen, using this tool."
+			},
+			{ 
 				title: "???",
 				img: require("@/assets/UnknownPromo.png"),
 				to: "",

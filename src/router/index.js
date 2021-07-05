@@ -34,6 +34,11 @@ const routes = [
 		path: '/tarot-character',
 		name: 'Tarot Character Generator',
 		component: () => import('../views/Tarot.vue')
+	},
+	{
+		path: '/trigger-tracker',
+		name: 'Track Events by Triggers',
+		component: () => import('../views/TriggerTracker.vue')
 	}
 ]
 

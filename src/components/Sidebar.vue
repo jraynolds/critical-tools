@@ -47,6 +47,11 @@ export default {
 				icon: "mdi-cards",
 				to: "/tarot-character/"
 			},
+			{
+				title: "Trigger Tracker",
+				icon: "mdi-bomb",
+				to: "/trigger-tracker/"
+			},
 			// {
 			// 	title: "Post-Session Poll",
 			// 	icon: "mdi-poll-box",
