@@ -1,10 +1,16 @@
 <template>
-	<v-card :color="color" class="mt-2">
+	<v-card :color="computedColor" class="mt-2" :dark="isDark">
 		<v-card-title class="d-flex">
 
-			<ColorPicker :color.sync="color"/>
+			<ColorPicker :color.sync="computedColor"/>
 
 			<span class="ml-2">{{ effect.title }}</span>
+
+			<v-spacer />
+
+			<v-btn icon @click="$emit('delete')" class="mr-n4 mt-n8">
+				<v-icon>mdi-delete</v-icon>
+			</v-btn>
 		</v-card-title>
 
 		<v-row class="mb-0">
@@ -15,6 +21,13 @@
 				</v-card-text>
 
 				<v-card-text class="d-flex align-center pt-0 pb-0">
+					<CharacterPicker 
+						v-for="character of effect.characters"
+						:key="character.name"
+						:character="character"
+						:color.sync="character.color"
+					/>
+
 					... 
 					<span v-for="(piece, index) of resultPieces" :key="index">
 
@@ -25,27 +38,12 @@
 							{{ piece }}
 						</span>
 
-						<v-tooltip bottom v-else>
-							<template v-slot:activator="{ on, attrs }">
-								<v-btn
-									v-bind="attrs"
-									v-on="on"
-									text
-									min-width="0"
-									class="px-2"
-									style="font-size: 20px;"
-									color="primary"
-									@click="rollResults"
-								>
-									{{ piece.total }}
-								</v-btn>
-							</template>
-							<div class="text-center">
-								<span>{{ piece.statement }}</span>
-								<br />
-								<span>{{ piece.toString() }}</span>
-							</div>
-						</v-tooltip>
+						<RollResult 
+							v-else 
+							:drollObject="piece" 
+							@click="rollResults"
+							:dark="isDark" 
+						/>
 					</span>
 				</v-card-text>
 
@@ -77,22 +75,33 @@
 import { roll } from "droll"
 
 export default {
-	props: [ "effect" ],
+	props: [ "effect", "color" ],
 	components: {
 		ColorPicker: () => import("@/components/trigger/ColorPicker.vue"),
+		CharacterPicker: () => import("@/components/trigger/CharacterPicker.vue"),
+		RollResult: () => import("@/components/trigger/RollResult.vue"),
 	},
 	data: () => ({
 		limitsReduced: 0,
 		resultPieces: [],
-		color: '#D6EFFF'
+		isDark: false
 	}),
 	computed: {
 		limit() {
 			if (!this.effect.limit) return 1;
-			return this.effect.limit - this.limitsReduced;
+			let result = this.effect.limit - this.limitsReduced;
+			if (result <= 0) this.$emit('delete');
+			return result;
 		},
 		characters() {
 			return this.effect.characters;
+		},
+		computedColor: {
+			get() { return this.effect.color },
+			set(val) {
+				this.isDark = val.hsl.l < .5; 
+				this.$emit('update:color', val.hex) 
+			}
 		}
 	},
 	methods: {

@@ -1,64 +1,22 @@
 <template>
 	<v-container>
-		<v-dialog
-      v-model="addDialog"
-      width="500"
-    >
-      <v-card>
-        <v-card-title class="text-h5 mb-4 header grey lighten-2">
-          Add Trigger
-        </v-card-title>
-
-				<v-row class="ma-0">
-					<v-col cols="12">
-						<v-autocomplete
-							v-model="addEffects"
-							:items="triggerTypes"
-							item-text="title"
-							label="Trigger(s)"
-							multiple
-						/>
-					</v-col>
-
-					<v-col cols="8">
-						<v-text-field v-model="addTitle" label="Title" />
-					</v-col>
-						
-					<v-col cols="4">
-						<v-select 
-							v-model="addLimit" 
-							:items="addLimits" 
-							label="Limit" 
-						/>
-					</v-col>
-
-					<v-col cols="12">
-						<v-textarea 
-							rows="3" 
-							v-model="addEffect" 
-							label="Effect" 
-						/>
-					</v-col>
-				</v-row>
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            text
-            @click="addEffect"
-          >
-            Add
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+		<AddEffectDialog 
+			:dialog.sync="addDialog" 
+			:characters="userCharacters" 
+			:triggerTypes="triggerTypes"
+			@addEffect="addEffect"
+			:defaultTrigger="addDefaultTrigger"
+		/>
 
 		<v-row class="mb-2">
 			<v-col cols="8">
-				<v-btn color="blue" style="width: 100%;">Add a Trigger</v-btn>
+				<v-btn 
+					color="blue" 
+					style="width: 100%;"
+					@click="addDialog = !addDialog"
+				>
+					Add a Trigger
+				</v-btn>
 			</v-col>
 			
 			<v-col cols="4">
@@ -71,47 +29,28 @@
 				v-for="triggerType of triggerTypes"
 				:key="triggerType.title"
 				:title="triggerType.title"
+				@removeEffect="removeEffect(...arguments, triggerType)"
+				@addEffect="popupDialog(triggerType)"
 				:effects="userEffects.filter(t => t.triggers.includes(triggerType.title))"
 				:disabled="!userEffects.filter(t => t.triggers.includes(triggerType.title)).length"
 			/>
-			<!-- <v-expansion-panel 
-				v-for="triggerType of triggerTypes" 
-				:key="triggerType.title"
-			>
-				<v-expansion-panel-header>
-					<v-btn 
-						icon 
-						class="flex-grow-0" 
-						@click.stop="addDialog = true; addEffects = [ triggerType ];"
-					>
-						<v-icon>mdi-plus-box</v-icon>
-					</v-btn>
-					{{ triggerType.title.toUpperCase() }}
-				</v-expansion-panel-header>
-				<v-expansion-panel-content>
-					<v-card 
-						v-for="trigger of userEffects.filter(t => t.triggers.includes(triggerType.title))" 
-						:key="trigger.title"
-					>
-						<v-card-title>{{ trigger.title }}</v-card-title>
-					</v-card>
-				</v-expansion-panel-content>
-			</v-expansion-panel> -->
 		</v-expansion-panels>
 	</v-container>
 </template>
 
 <script>
-const DEFAULT_EFFECT = {
-	addEffects: [],
-	addTitle: "",
-	addCondition: "",
-	addEffect: "",
-	addSource: "",
-	addALimit: false,
-	addLimit: 1,
-	addCharacters: []
-}
+const DEFAULT_CHARACTERS = [
+	{
+		name: "Bob",
+		icon: "mdi-user-account",
+		color: "black"
+	},
+	{
+		name: "Aerith",
+		icon: "mdi-chess-queen",
+		color: "purple"
+	}
+]
 
 const DEFAULT_EFFECTS = [
 	{
@@ -119,33 +58,35 @@ const DEFAULT_EFFECTS = [
 		title: "Crab Spawner",
 		condition: "there are fewer than 3 crabs",
 		result: "spawn 2d4+1 crabs.",
+		color: '#D6EFFF'
 	},
 	{
 		triggers: [ "turn start" ],
 		title: "Healing Salve",
-		result: "heals for 1d6 at the beginning of his turn.",
+		result: "heals for 1d6 at the beginning of their turn.",
 		limit: 3,
-		characters: [ "Ben" ]
+		characters: [ 
+			DEFAULT_CHARACTERS[0],
+			DEFAULT_CHARACTERS[1]
+		],
+		color: '#D6EFFF'
 	},
 	{
 		triggers: [ "round end" ],
 		title: "Burning Sands",
-		result: "heals for 8 at the beginning of his turn.",
-		characters: [ "Ben" ]
+		result: "Everyone takes 8 damage at the end of the round.",
+		color: '#D6EFFF'
 	}
 ]
 
 export default {
 	components: {
 		TriggerExpand: () => import("@/components/trigger/TriggerExpand.vue"),
+		AddEffectDialog: () => import("@/components/trigger/AddEffectDialog.vue"),
 	},
 	data: () => ({
-		...DEFAULT_EFFECT,
-
 		addDialog: false,
-		addLimits: [
-			1, 2, 3, 4, 5, 6, 7, 8, 9
-		],
+		addDefaultTrigger: null,
 	
 		triggerTypes: [
 			{ title: "round start", description: null },
@@ -159,24 +100,34 @@ export default {
 			{ title: "damage taken", description: null },
 			{ title: "round end", description: null },
 		],
-		userEffects: []
+		userEffects: [],
+		userCharacters: []
 	}),
 	methods: {
-		resetAddition() {
-			for (let key in DEFAULT_EFFECT) this[key] = DEFAULT_EFFECT[key];
-		},
-		addUserEffect() {
-			let effect = {
-				// triggers: [ triggerType.title ],
-				title: this.addTitle,
-				effect: this.addEffect,
-				limit: this.addLimit
-			}
+		addEffect(effect) {
 			this.userEffects.push(effect);
+			if (effect.characters) {
+				for (let character of effect.characters) {
+					if (!this.userCharacters.includes(character)) {
+						this.userCharacters.push(character);
+					}
+				}
+			}
+		},
+		popupDialog(triggerType) {
+			this.addDefaultTrigger = triggerType;
+			this.addDialog = true;
+		},
+		removeEffect(effect, triggerType) {
+			if (effect.triggers.length <= 1) {
+				this.userEffects = this.userEffects.filter(e => e != effect);
+			} else {
+				effect.triggers = effect.triggers.filter(t => t != triggerType.title);
+			}
 		},
 		addExamples() {
 			for (let effect of DEFAULT_EFFECTS) {
-				this.userEffects.push(effect);
+				this.addEffect(effect);
 			}
 		}
 	}

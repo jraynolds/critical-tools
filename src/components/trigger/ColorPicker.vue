@@ -6,7 +6,7 @@
 	>
 		<template v-slot:activator="{ on, attrs }">
 			<v-btn
-				:color="userColor"
+				:color="computedColor"
 				v-bind="attrs"
 				v-on="on"
 				width="10"
@@ -18,7 +18,7 @@
 			</v-btn>
 		</template>
 
-		<Chrome v-model="userColor" />
+		<Chrome v-model="computedColor" />
 	</v-dialog>
 </template>
 
@@ -34,13 +34,12 @@ export default {
 		dialog: false
 	}),
 	computed: {
-		userColor: {
+		computedColor: {
 			get() {
 				return this.color;
 			},
 			set(val) {
-				console.log(val);
-				this.$emit('update:color', val.hex);
+				this.$emit('update:color', val);
 			}
 		}
 	}

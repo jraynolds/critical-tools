@@ -4,7 +4,7 @@
 			<v-btn 
 				icon 
 				class="flex-grow-0" 
-				@click="$emit('addTrigger')"
+				@click="$emit('addEffect')"
 			>
 				<v-icon>mdi-plus-box</v-icon>
 			</v-btn>
@@ -17,7 +17,8 @@
 				v-for="effect of effects" 
 				:key="effect.title"
 				:effect="effect"
-				@removeEffect="$emit('removeEffect', effect)"
+				:color.sync="effect.color"
+				@delete="$emit('removeEffect', effect)"
 			/>
 		</v-expansion-panel-content>
 	</v-expansion-panel>
